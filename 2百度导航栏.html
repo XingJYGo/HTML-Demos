@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标准导航案例</title>
+    <style type="text/css">
+        /*1 设定根目录尺寸*/
+        html{
+            font-size:625%;
+        }
+        /*2 清理默认间距*/
+        body,ul,li{
+            margin:0;
+            padding:0;
+        }
+        /*3 定导航栏*/
+        .nav{
+            width: 80%;
+            height:0.6rem;
+            margin-top: 30px;
+            text-align: center;
+            border-top:3px solid #666 ;
+            background-color: #ECEDEE;
+        }
+        /*4 li外部设置*/
+        .nav-con{
+            width: 80%;
+            line-height: 0.6rem;
+            /*nav-con 居中显示*/
+            margin: 0 auto;
+        }
+        /*5 li内部设置*/
+        .nav ul li{
+            /*一行显示---左浮动*/
+             float: left;
+             font-size: 16px;
+             list-style: none;
+             background: url("img/li_bg.jpg") no-repeat left;
+            /*li的高度不继承父类*/
+            height: 0.55rem;
+            padding: 0 0.3rem ;
+
+         }
+
+        /*6  a的布局设置*/
+        .nav ul li a{
+            display: inline-block;
+            text-decoration: none;
+            height: 0.55rem;
+            font: 18px/55px 微软雅黑;
+            color: #000;
+        }
+        /*7  注意权重，设置链接*/
+        .nav ul li a:hover{color: #5fc0cd;
+        }
+
+
+    </style>
+</head>
+<body>
+        <div class="nav">
+            <div class="nav-con">
+            <ul>
+                <li><a href="#">背包</a></li>
+                <li><a href="#">鞋子</a></li>
+                <li><a href="#">笔记本</a></li>
+                <li><a href="#">电脑</a></li>
+            </ul>
+            </div>
+        </div>
+</body>
+</html>
