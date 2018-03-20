@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>（脱标）定位的盒子居中显示</title>
+    <style type="text/css">
+        /*定位：子绝父相定位*/
+        /*1 初始化*/
+        body{
+            margin: 0;
+            padding:0;
+        }
+        .box{
+            height: 200px;
+            width:100%;
+            background: #aaa;
+            position: relative;
+        }
+        .nav{
+            height: 60px;
+            width: 800px;
+            background: #666666;
+            /*父元素定位了，子元素才能定位*/
+            position: absolute;
+            bottom: 0;
+            left:50%;
+            margin-left: -400px;
+
+
+            /*margin:0 auto;  只能让标准流的盒子定位*/
+
+
+
+        }
+
+    </style>
+</head>
+<body>
+        <div class="box">
+            <div class="nav"></div>
+        </div>
+</body>
+</html>
