@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>精灵图-减少加载次数（很多小图放到大图上，加载一次大图就可加载所有小图）</title>
+    <style type="text/css">
+        /*1 页面的初始化*/
+        body,ul,li{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style: none;
+        }
+        /*2 块级元素排版布局*/
+        .nav{
+            background: #000000;
+            height: 48px;
+            margin-top: 100px;
+        }
+        .nav-con{
+            margin: 0 auto;
+            width: 1182px;
+            position: relative;
+        }
+        /*3 li元素修饰*/
+        .nav-con ul li{
+            float: left;
+        }
+        .nav-con ul li a{
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            font:16px/48px 宋体;
+            height:48px;
+            text-align: center;
+            /*a 内文字左右空间太小，
+            增加padding使其左右扩大13px*/
+            padding:0 13px;
+        }
+        .nav-con ul li a:hover{
+            background-color: #5fc0cd;
+        }
+        /*精灵图图标*/
+        .hot{
+               width: 31px;
+               height: 21px;
+               background: url("img/sprite.png") -57px 0 ;
+               /*absolute 使其脱标，精灵图浮动*/
+               position: absolute;
+              /*精灵图 定位*/
+                left: 60px;
+                bottom: -10px;
+        }
+        .new{
+            width:31px;
+            height: 21px;
+            /*精灵图的位置*/
+            background:url("img/sprite.png") -135px 0 ;
+            position: absolute;
+            /*精灵图 定位*/
+            left: 250px;
+            bottom: -10px;
+        }
+    </style>
+</head>
+<body>
+        <div class="nav">
+            <div class="nav-con">
+                <div class="hot"></div>
+                <div class="new"></div>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">java</a></li>
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">IOS</a></li>
+                    <li><a href="#">python</a></li>
+                    <li><a href="#">C++</a></li>
+                    <li><a href="#">尖端技术</a></li>
+                    <li><a href="#">网络营销</a></li>
+                    <li><a href="#">活动专区</a></li>
+                    <li><a href="#">网络专区</a></li>
+                    <li><a href="#">前端移动开发</a></li>
+                </ul>
+            </div>
+        </div>
+</body>
+</html>

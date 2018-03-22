@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>规避脱标流</title>
+    <style type="text/css">
+           /*标准流---浮动--定位。*/
+        /*1  尽量使用标准流*/
+        /*2  标准流--解决不了的使用浮动*/
+        /*3  浮动解决不了的使用定位。>*/
+        .son {
+            width:100px;
+            height: 100px;
+            background: green;
+            /*自动跑到右边使其产生浮动效果*/
+/*---------------水平居中   */
+            /*1 float: right;*/
+            margin-left: auto;
+            /*
+            2 margin: 0 auto;
+            居中
+            */
+            /*3 float: left;*/
+            /*3 margin-right:auto;*/
+/*---------------垂直居中vertical-align   */
+            vertical-align: middle;
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04顺丰案例</title>
+    <!--子绝父相-->
+    <style type="text/css">
+        /*1初始化*/
+        body,li,ul{
+            margin:0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+
+        }
+        /*2 banner*/
+        .banner{
+            /*宽高 居中*/
+            width: 1259px;
+            height: 472px;
+            margin: 0 auto;
+        /*6.1 子绝父相*/
+            position: relative;
+
+        }
+        /*3 search */
+        .search{
+            width: 960px;
+            height: 60px;
+            background: #333;
+            /*6.2 子绝父相*/
+            position: absolute;
+            bottom: 0;
+            left:50%;
+            margin-left: -480px;
+        }
+        /*4 search ul li 定位，布局*/
+        .search ul li{
+            float: left;
+        }
+        .search ul li a{
+            display: inline-block;
+            width: 160px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        /*5 a的修改*/
+        .search ul li a:hover{
+            background:#ffffff;
+            color: #000;
+        }
+        /*6 子绝父相*/
+        /*7 第一个链接选项*/
+        .search ul li a.one:hover{
+            color: #000;
+            background:#ffffff;
+        }
+        /*7.1bottom left 定位 展示栏*/
+        .login{
+            position: absolute;
+            left:200px;
+            bottom:56px;
+        }
+        .sj{
+            position: absolute;
+            left: 220px;
+            bottom: 48px;
+            /*层叠顺序，值越大越在上面*/
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+        <div class="banner">
+            <div class="pic"><img src="img/sf.png"></div>
+            <div class="search">
+                <ul>
+                    <li><a href="#" class="one">订单运输</a></li>
+                    <li><a href="#">运费查询</a></li>
+                    <li><a href="#">时效查询</a></li>
+                    <li><a href="#">服务站点查询</a></li>
+                    <li><a href="#">收送范围查询</a></li>
+                    <li><a href="#">客户专区</a></li>
+                </ul>
+            </div>
+            <div class="sj"><img src="img/4.png" alt=""></div>
+            <div class="login"><img src="img/3.png" alt=""></div>
+        </div>
+</body>
+</html>

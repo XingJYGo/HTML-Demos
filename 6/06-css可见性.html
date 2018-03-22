@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css可见性</title>
+    <style type="text/css">
+        .box,.div1,.div2,.div3{
+            width:300px;
+            height: 300px;
+        }
+        .box{
+            /*溢出隐藏，使父盒子始终显示一个宽高*/
+            overflow: hidden;
+        }
+        .div1{
+            background: red;
+
+        }
+        .div2{
+            background: green;
+        }
+        .div3{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <!--overflow:hiden;溢出隐藏-->
+    <!--visiblity：hidden；隐藏元素  隐藏之后还占据原来的位置-->
+    <!--Display：none； 隐藏元素 不占据原来的位置-->
+    <!--Display：none；元素可见-->
+
+    <!--Display：none；-->
+    <!--isiblity：hidden；  -->
+    <!--常与js一起使用-->
+
+
+</body>
+    <a href="#div1">div1</a>
+    <a href="#div2">div2</a>
+    <a href="#div3">div3</a>
+    <div class="box">
+        <div class="div1" id="div1"></div>
+        <div class="div2" id="div2"></div>
+        <div class="div3" id="div3"></div>
+    </div>
+</html>
