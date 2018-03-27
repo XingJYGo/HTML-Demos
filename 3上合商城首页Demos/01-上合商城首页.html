@@ -51,11 +51,11 @@
             height: 39px;
             float: left;
         }
-         .search{
+        .search{
             width: 190px;
             height: 39px;
-             float: right;
-             padding-right: 25px;
+            float: right;
+            padding-right: 25px;
         }
         .search input[type="text"]{
             width: 153px;
@@ -75,6 +75,7 @@
             width: 980px;
             background: url("img/nav_bg.png");
             border-top: 1px solid black;
+            margin: 0 auto;
         }
         .nav-con{
             width: 980px;
@@ -88,7 +89,7 @@
             display: inline-block;
             background: url("img/nav_bg-line.png") no-repeat right;
             height: 55px;
-            font: 700 12px/55px 宋体;
+            font: 700 16px/55px 宋体;
             color: #000000;
             padding: 0 30px;
         }
@@ -157,29 +158,28 @@
             vertical-align: middle;
         }
         .pro-pic{
-            /*相对定位，子绝父相*/
-           position: absolute;
+            position: absolute;
             left: 55px;
             top: 50px;
         }
         .Triangle-L{
             position: absolute;
-                left: 23px;
-                top: 100px;
+            left: 23px;
+            top: 100px;
         }
         .Triangle-R{
             position: absolute;
-                right:23px;
-                top: 100px;
+            right:23px;
+            top: 100px;
         }
         /*4 news新闻中间*/
         .news-cen ul{
             border: 0;
-            margin: 10px  17px  0;
+            margin: 12px  17px  0;
         }
         .news-cen ul li{
             height: 27px;
-            font:16px/ 27px 宋体;
+            font:14px/ 27px 宋体;
             border-bottom: 1px dashed #DCDCDC;
             padding-left: 6px;
 
@@ -200,18 +200,19 @@
             height: 12px;
             border-left: 3px solid green;
             padding-left: 5px;
-            margin-top: 10px;
-            line-height: 12px;
+            margin-top: 15px;
+			font:14px/ 14px 宋体;
         }
         .tec p{
             padding-left: 3px;
+			font:14px/ 20px 宋体;
         }
 
         /*5 底部链接*/
         .footer{
             height: 280px;
             background: #2D2D2D;
-            border-bottom: 1px #cecece;
+            border-bottom: 4px #cecece;
         }
         .footer-con {
             width: 980px;
@@ -221,137 +222,174 @@
             float: left;
             margin-top: 20px;
             margin-right: 40px;
+            width: 200px;
+            height: 100px;
         }
         .footer-con dl dt{
             color: #c0c0c0;
+            margin-top: 20px;
         }
         .footer-con dl dd{
             color: #707070;
-            margin-top: 20px;
+            margin-top: 15px;
+            font-size: 11px;
+            line-height: 3px;
         }
         /*5底部结束*/
         .bot{
-         background: #2D2D2D;
-         height: 84px;
-         text-align: center;
-
+            background: #2D2D2D;
+            color: #c0c0c0;
+            height: 84px;
+            font-size:12px;
+        }
+        .bot .bot-con{
+            height: 84px;
+            width: 960px;
+        }
+        .bot .bot-con .internet{
+            height: 84px;
+            width: 400px;
+            margin-left: 180px;
+        }
+        .bot .bot-con .auth{
+            height: 84px;
+            width: 300px;
         }
     </style>
 </head>
 <body>
-        <!--1 header部分-->
-        <div class="header">
-            <div class="logo">
-                <img src="img/logo.jpg" alt="">
-            </div>
-            <div class="search">
-                    <input type="text" placeholder="请输入文字......">
-                    <input type="button">
-            </div>
+<!--1 header部分-->
+<div class="header">
+    <div class="logo">
+        <img src="img/logo.jpg" alt="">
+    </div>
+    <div class="search">
+        <input type="text" placeholder="请输入文字......">
+        <input type="button">
+    </div>
+</div>
+<div class="nav">
+    <div class="nav-con">
+        <ul>
+            <li><a href="#">华为Pro</a></li>
+            <li><a href="#">华为荣耀</a></li>
+            <li><a href="#">小米Pro</a></li>
+            <li><a href="#">三星Max8</a></li>
+            <li><a href="#">Vivo</a></li>
+            <li><a href="#">OPPO</a></li>
+        </ul>
+    </div>
+</div>
+<!--2  banner开始-->
+<div class="banner"><img src="img/banner.jpg" alt=""></div>
+<!--2  banner部分结束-->
+<!--3 信息部分开始-->
+<div class="mes">
+    <div class=mes-con>
+        <div class="mes-com-1">最新公告：上合商城完成日销量200万台</div>
+        <div class="mes-com-r">
+            <img src="img/zone.png">
+            <img src="img/weibo.png">
+            <img src="img/xinlang.png">
+            <img src="img/renren.png">
         </div>
-        <div class="nav">
-            <div class="nav-con">
-                <ul>
-                    <li><a href="#">百度一下</a></li>
-                    <li><a href="#">网站导航</a></li>
-                    <li><a href="#">3D剑侠</a></li>
-                    <li><a href="#">吃鸡SF</a></li>
-                    <li><a href="#">淘宝抢购</a></li>
-                    <li><a href="#">天猫超市</a></li>
-                </ul>
-            </div>
+    </div>
+</div>
+<!--3 信息部分结束-->
+<!--4 新闻开始-->
+<div class="news clearfix">
+    <!--4-1 新闻左盒子-->
+    <div class="news-left fl">
+        <div class="pro">
+            <img src="img/o.jpg">
+            新品发布
         </div>
-        <!--2  banner开始-->
-        <div class="banner"><img src="img/banner.jpg" alt=""></div>
-        <!--2  banner部分结束-->
-       <!--3 信息部分开始-->
-        <div class="mes">
-            <div class=mes-con>
-                <div class="mes-com-1">最新公告：上合哈哈</div>
-                <div class="mes-com-r">
-                    <img src="img/zone.png">
-                    <img src="img/weibo.png">
-                    <img src="img/xinlang.png">
-                    <img src="img/renren.png">
-                </div>
-            </div>
+        <div class="pro-pic"><img src="img/home_hot_01.png"></div>
+        <div class="Triangle-L"><img src="img/left.png"></div>
+        <div class="Triangle-R"><img src="img/right.png"></div>
+    </div>
+    <!--4-2 新闻中间盒子  start-->
+    <div class="news-cen fl">
+        <div class="pro">
+            <img src="img/o.jpg">
+            新闻中心
         </div>
-        <!--3 信息部分结束-->
-        <!--4 新闻开始-->
-        <div class="news clearfix">
-            <!--4-1 新闻左盒子-->
-            <div class="news-left fl">
-                <div class="pro">
-                    <img src="img/o.jpg">
-                    新品发布
-                </div>
-                <div class="pro-pic"><img src="img/home_hot_01.png"></div>
-                <div class="Triangle-L"><img src="img/left.png"></div>
-                <div class="Triangle-R"><img src="img/right.png"></div>
-            </div>
-            <!--4-2 新闻中间盒子  start-->
-            <div class="news-cen fl">
-                    <div class="pro">
-                        <img src="img/o.jpg">
-                        新闻中心
-                    </div>
-                    <ul>
-                        <li><a href="#" class="first">最新上合手机首售2000件</a></li>
-                        <li><a href="#">手机测评100次</a></li>
-                        <li><a href="#">三星对新手机有很强的自信</a></li>
-                        <li><a href="#">上合手机已售罄</a></li>
-                        <li><a href="#">华为手机性能领先手机前三</a></li>
-                        <li><a href="#">华为手机成为最大的手机出售商</a></li>
-                    </ul>
-            </div>
-            <!--4-2 新闻中间盒子 end-->
-            <!--4-3 新闻右盒子   start-->
-            <div class="news-right fr">
-                    <div class="pro">
-                        <img src="img/o.jpg">
-                       技术与支持
-                    </div>
-                    <div class="tec">
-                        <ul>
-                            <li>售后服务</li>
-                            <li>投诉与建议</li>
-                            <li>联保网点</li>
-                            <li>常见问题FAQ</li>
-                            <br>
-                            <p>华为、三星、苹果手机<br>成为世界三大手机成产商</p>
-                        </ul>
-                    </div>
-            </div>
-            <!--4-3 新闻右盒子  end-->
+        <ul>
+            <li><a href="#" class="first">最新上合手机首售2000件</a></li>
+            <li><a href="#">手机测评100次</a></li>
+            <li><a href="#">三星对新手机有很强的自信</a></li>
+            <li><a href="#">上合手机已售罄</a></li>
+            <li><a href="#">华为手机性能领先手机前三</a></li>
+            <li><a href="#">华为手机成为最大的手机出售商</a></li>
+        </ul>
+    </div>
+    <!--4-2 新闻中间盒子 end-->
+    <!--4-3 新闻右盒子   start-->
+    <div class="news-right fr">
+        <div class="pro">
+            <img src="img/o.jpg">
+            技术与支持
         </div>
-        <!--4 新闻结束-->
-        <!--5 底部开始-->
-        <div class="footer">
-            <div class="footer-con">
-                <dl>
-                    <dt>上合首页</dt>
-                    <dd>返回首页</dd>
-                </dl>
-                <dl>
-                    <dt>上合首页</dt>
-                    <dd>返回首页</dd>
-                </dl>
-                <dl>
-                    <dt>上合首页</dt>
-                    <dd>返回首页</dd>
-                </dl>
-                <dl>
-                    <dt>上合首页</dt>
-                    <dd>返回首页</dd>
-                </dl>
-            </div>
+        <div class="tec">
+            <ul>
+                <li>售后服务</li>
+                <li>投诉与建议</li>
+                <li>联保网点</li>
+                <li>常见问题FAQ</li>
+                <br>
+                <p>华为、三星、苹果手机<br>成为世界前三大手机成产商</p>
+            </ul>
         </div>
-        <!--5 底部结束-->
-        <!--6 底部开始-->
-        <div class="bot">
-            上海市GDP居全国靠前，上海市GDP居全国靠前，上海市GDP居全国靠前，
-            上海市GDP居全国靠前，上海市GDP居全国靠前，上海市GDP居全国靠前，
-        </div>
-        <!--6 底部开始-->
+    </div>
+    <!--4-3 新闻右盒子  end-->
+</div>
+<!--4 新闻结束-->
+<!--5 底部开始-->
+<div class="footer">
+    <div class="footer-con">
+        <dl>
+            <dt>购物指南</dt>
+            <dd>免费注册</dd>
+            <dd>开通支付宝</dd>
+            <dd>支付宝充值</dd>
+        </dl>
+        <dl>
+            <dt>上合保障</dt>
+            <dd>发票保障</dd>
+            <dd>售后规则</dd>
+            <dd>缺货赔付</dd>
+        </dl>
+        <dl>
+            <dt>支付方式</dt>
+            <dd>快捷支付</dd>
+            <dd>信用卡</dd>
+            <dd>余额宝</dd>
+            <dd>蚂蚁花呗</dd>
+            <dd>货到付款</dd>
+        </dl>
+        <dl>
+            <dt>商家服务</dt>
+            <dd>天猫规则</dd>
+            <dd>商家入驻</dd>
+            <dd>商家中心</dd>
+            <dd>天猫智库</dd>
+            <dd>物流服务</dd>
+            <dd>喵言喵语</dd>
+            <dd>运营服务</dd>
+        </dl>
+    </div>
+</div>
+<!--5 底部结束-->
+<!--6 底部开始-->
+<div class="bot">
+    <div class="bot-con">
+   <div class="internet fl"><p>互联网药品信息服务资质证书编号：沪-（经营性）-2017-0005</p></div>
+    <div class="auth fr"> <p>增值电信业务经营许可证： 沪B2-20110446</p></div>
+    </div>
+</div>
+<!--6 底部开始-->
 </body>
 </html>
+
+
+
