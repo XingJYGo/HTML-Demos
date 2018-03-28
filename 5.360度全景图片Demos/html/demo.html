@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script>
+window.onload=function ()
+{
+	var x=0;
+	var oImg=document.getElementById('img1');
+	var aImg=document.getElementsByTagName('img');
+	var oLastImg=oImg;
+	var lastX=0;
+	var iSpeed=0;
+	var timer=null;
+	var i=0;
+	
+	for(i=1;i<77;i++)
+	{
+		(function (oNewImg){
+			var oImg=new Image();
+			
+			oImg.onload=function ()
+			{
+				oNewImg.src=this.src;
+			};
+			oImg.src='img/miaov ('+i+').jpg';
+			
+			oNewImg.style.display='none';
+			
+			document.body.appendChild(oNewImg);
+		})(document.createElement('img'));
+	}
+	
+	document.onmousedown=function (ev)
+	{
+		var oEvent=ev||event;
+		var disX=oEvent.clientX-x;
+		
+		clearInterval(timer);
+		
+		document.onmousemove=function (ev)
+		{
+			var oEvent=ev||event;
+			
+			x=oEvent.clientX-disX;
+			
+			move();
+			
+			iSpeed=x-lastX;
+			lastX=x;
+			
+			//oImg.src='img/miaov ('+l+').jpg';
+			
+			return false;
+		};
+		
+		document.onmouseup=function ()
+		{
+			document.onmousemove=null;
+			document.onmouseup=null;
+			
+			document.title=iSpeed;
+			
+			timer=setInterval(function (){
+				x+=iSpeed;
+				
+				move();
+			}, 30);
+		};
+		
+		function move()
+		{
+			if(iSpeed>0)
+			{
+				iSpeed--;
+			}
+			else
+			{
+				iSpeed++;
+			}
+			
+			if(iSpeed==0)
+			{
+				clearInterval(timer);
+			}
+			
+			var l=parseInt(-x/10);
+			
+			if(l>0)
+			{
+				l=l%77;
+			}
+			else
+			{
+				l=l+-Math.floor(l/77)*77;
+			}
+			
+			document.title=iSpeed;
+			
+			if(oLastImg!=aImg[l])
+			{
+				oLastImg.style.display='none';
+				aImg[l].style.display='block';
+				oLastImg=aImg[l];
+			}
+		}
+		
+		return false;
+	};
+};
+</script>
+</head>
+
+<body>
+<img id="img1" src="img/miaov (0).jpg" />
+<!--<div id="bg"></div>
+<div id="prog">
+	妙味课堂——360度全景展示 载入中......<span>0%</span>
+	<div id="bar"></div>
+</div>-->
+</body>
+</html>
