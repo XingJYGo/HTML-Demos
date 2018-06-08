@@ -1,1 +1,1 @@
-2
+mongod.exe --logpath F:\MongoDB\data\logs\mongodb.log --logappend --dbpath F:\MongoDB\data\db --directoryperdb --serviceName MongoDB -install
